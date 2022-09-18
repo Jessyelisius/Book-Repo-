@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Add Book</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+
+      
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+
+              <h2 class="mb-5">Add Book <br> <small>PDF Files only</small></h2>
+
+              <form class="border-right pr-5 mb-5" required action="/addbook" method="post" enctype="multipart/form-data" id="contactForm" name="contactForm">
+                <div class="row">
+                    <p><%= msg %></p>
+                  <div class="col-md-6 form-group">
+                    <input type="text" required class="form-control" name="Title" id="fname" placeholder="Book Title">
+                  </div>
+                    <input type="file" name="booky" accept="application/pdf" required id="">
+                  
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                      <textarea class="form-control" name="Descrption" id="message" cols="30" rows="7" placeholder="Write your book description here"></textarea>
+                    </div>
+                  </div>
+
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" value="Add Book" class="btn btn-warning rounded-0 py-2 px-4">
+                    <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+
+              <div id="form-message-warning mt-4"></div> 
+
+            </div>
+            <div class="col-lg-4 ml-auto">
+              <h3 class="mb-4">Book Repo!</h3>
+              <p> This is the page to add your book</p>
+              <p>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </div>
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
