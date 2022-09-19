@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.Title %></title>
+    <style>
+        .btn{
+            background-color: #ffc200;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 3px;
+            color: black;
+            transition-duration: 0.5s;
+        }
+        .btn:hover{
+            background-color: #b28704;
+            transition-duration: 0.3s;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1><%= item.Title %></h1>
+        <h3><%= item.Author %> || <%= item.Date %> </h3>
+    </center>
+    <hr>
+    <pre><%= item.Descrption %> </pre>
+    <center>
+    <a href="<%= item.Book_link %>" download="" class="btn">Download book</a>
+    </center>
+</body>
+</html>

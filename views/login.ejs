@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title><%= title %></title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+
+      
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+
+              <h2 class="mb-5"><%= title %> </h2>
+<p><%= msg %></p>
+              <form class="border-right pr-5 mb-5" action="<%= route %>" method="post" id="contactForm" name="contactForm">
+                <div class="row">
+                    
+                  <div class="col-md-6 form-group">
+                    <input type="text" class="form-control" name="username" id="fname" placeholder="Username">
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="password" class="form-control" name="password" id="lname" placeholder="Password">
+                  </div>
+                </div>
+                
+
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" value="Login" class="btn btn-warning rounded-0 py-2 px-4">
+                    <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+
+              <div id="form-message-warning mt-4"></div> 
+
+            </div>
+            <div class="col-lg-4 ml-auto">
+              <h3 class="mb-4">Book Repo!</h3>
+              <p> This is an opensource website where you can upload your books... click here to register <a href="/register">register</a> and here to <a href="/login">login</a></p>
+              <p>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </div>
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <form action="<%= route %>" method="post">
+        <p><%= msg %></p>
+        <input type="text" name="username" placeholder="Username" id="">
+        <br><br>
+        <input type="password" name="password" placeholder="password" minlength="6" id="">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="/login">Login</a>
+    <a href="/register">register</a>
+</body>
+</html> -->

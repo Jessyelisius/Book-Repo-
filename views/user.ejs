@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+        .btn{
+            background-color: #ffc200;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 3px;
+            color: black;
+            transition-duration: 0.5s;
+        }
+        .btn:hover{
+            background-color: #b28704;
+            transition-duration: 0.3s;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2 style="border-bottom: solid black 3px;"><%= username %> </h2>
+        <a href="/" class="btn">back</a>
+    </center>
+    <hr>
+    <% if (books.length>=1) { %>
+        <% books.reverse().forEach(i => { %>
+            <article onclick="openarticle('/article/<%= i._id %>')">
+                <div>
+                    <div>
+                        <h2><%= i.Title %></h2>
+                    <p><%= i.Date %> </p>
+                    </div>
+                    <p><%= i.Author %> </p>
+                </div>
+    
+                <br>
+                <div>
+                    <pre><%= i.Descrption %></pre>
+                    <a href="/delete/<%= i._id %>" class="btn">delete</a>
+                    <a href="/edit/<%= i._id %>" class="btn">edit</a>
+                </div>
+            </article>
+            <hr>
+        <% }) %>
+    <% }else{ %>
+        <center><h3>Oga u no get book</h3></center>
+    <% } %> 
+
+
+    <script>
+        function openarticle(link) {
+        window.location=link
+    }
+    </script>
+</body>
+</html>
