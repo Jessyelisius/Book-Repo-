@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT|| 3000
+const port = process.env.PORT|| 5000
 require('dotenv').config()
 
 //db
@@ -8,7 +8,7 @@ require('dotenv').config()
 //Jessy
 //sJdkHzWLKLkGAtn3
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Jessy:sJdkHzWLKLkGAtn3@cluster0.a6xsfix.mongodb.net/bookstorage?retryWrites=true&w=majority',{useNewURLParser:true,useUnifiedTopology:true}).then(()=>{
+mongoose.connect('mongodb+srv://Chinenye:YTlYaYYkaBVPRsfh@mydb.hkigliq.mongodb.net/?retryWrites=true&w=majority',{useNewURLParser:true,useUnifiedTopology:true}).then(()=>{
     console.log('db connected');
     app.listen(port, () => console.log(`app listening on port ${port}!`))
 }).catch(err=>{
